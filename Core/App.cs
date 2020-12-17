@@ -10,7 +10,9 @@ namespace Core
     {
         public override void Initialize()
         {
-            RegisterAppStart<GuestBookViewModel>();
+            RegisterAppStart<MaintenanceViewModel>();
         }
+
+
     }
 }

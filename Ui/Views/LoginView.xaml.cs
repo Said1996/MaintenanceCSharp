@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Ui.Views
 {
     /// <summary>
-    /// Interaction logic for GuestBookView.xaml
+    /// Interaction logic for LoginView.xaml
     /// </summary>
-    public partial class GuestBookView : MvxWpfView
+    public partial class LoginView : MvxWpfView
     {
-        public GuestBookView()
+        public LoginView()
         {
             InitializeComponent();
         }
