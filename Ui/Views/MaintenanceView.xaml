@@ -86,10 +86,22 @@
             
         </Grid>
 
-        <DataGrid x:Name="Table1" AutoGenerateColumns="True" mvx:Bi.nd="ItemsSource ClientDevices; SelectedItem ClientDevice"  Grid.Row="0" Grid.Column="0" Background="Cyan" CanUserAddRows="False" AutoGeneratingColumn="DataGrid_AutoGeneratingColumn"/>
+        <DataGrid x:Name="Table1" AutoGenerateColumns="True" mvx:Bi.nd="ItemsSource ClientDevices; SelectedItem ClientDevice"  Grid.Row="0" Grid.Column="0" Background="Cyan" CanUserAddRows="False" AutoGeneratingColumn="DataGrid_AutoGeneratingColumn">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Paid">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Paid" Command="{Binding Path=DataContext.DeleteDevice, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=views:MvxWpfView}}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
 
         <UniformGrid Grid.Row="1" Grid.ColumnSpan="2" Columns="10" Rows="2">
-            <Button  Content="Paid" Grid.ColumnSpan="4" mvx:Bi.nd="Command DeleteDevice"/>
+           
             <TextBlock />
             <TextBlock />
             <TextBlock />
