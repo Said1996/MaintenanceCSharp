@@ -11,6 +11,8 @@
     <PackageReference Include="MaterialDesignThemes" Version="3.2.0" />
     <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.19" />
     <PackageReference Include="MvvmCross.Platforms.Wpf" Version="7.1.2" />
+    <PackageReference Include="MvvmCross.Plugin.FieldBinding" Version="7.1.2" />
+    <PackageReference Include="MvvmCross.Plugin.MethodBinding" Version="7.1.2" />
   </ItemGroup>
 
   <ItemGroup>

@@ -10,7 +10,7 @@ namespace Core
     {
         public override void Initialize()
         {
-            RegisterAppStart<LoginViewModel>();
+            RegisterAppStart<MaintenanceViewModel>();
         }
 
 
