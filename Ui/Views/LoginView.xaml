@@ -22,11 +22,11 @@
         <TextBlock HorizontalAlignment="Left" Margin="98,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="39" Width="100"  Foreground="#FF606CB8" FontWeight="Bold" FontSize="26" FontFamily="Arial Black"><Run Text="Sign In"/><LineBreak/><Run/></TextBlock>
         <TextBlock HorizontalAlignment="Left" TextAlignment="Right" Margin="46,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="82" Height="28" FontWeight="Bold" FontFamily="Segoe UI"><Run Text="Email:"/><LineBreak/><Run/></TextBlock>
         <TextBlock HorizontalAlignment="Left" TextAlignment="Right" Margin="27,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" Height="28" FontWeight="Bold"><Run Text="Password:"/><LineBreak/><Run/></TextBlock>
-        <TextBox HorizontalAlignment="Left" Margin="142,128,0,0" Text="Email" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" Background="#FF508CE2"/>
-        <TextBox HorizontalAlignment="Left" Margin="142,192,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" Background="#FF528EE4"/>
-        <Button Content="Sign In" HorizontalAlignment="Center" Margin="0,269,0,0" VerticalAlignment="Top" Height="36" Width="104"/>
-        <Button Content="Sign Up Instead?" HorizontalAlignment="Center" Height="35" Margin="0,428,0,0" VerticalAlignment="Top" Width="148" BorderBrush="White" Background="White"/>
-        <TextBlock  HorizontalAlignment="Center" TextAlignment="Center" Height="33" Margin="0,336,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="246"/>
+        <TextBox mvx:Bi.nd="Text Email" HorizontalAlignment="Left" Margin="142,128,0,0" Text="Email" TextWrapping="NoWrap" VerticalAlignment="Top" Width="129" Background="#FF508CE2"/>
+        <TextBox mvx:Bi.nd="Text Password" HorizontalAlignment="Left" Margin="142,192,0,0"  VerticalAlignment="Top" Width="129" Background="#FF508CE2"/>
+        <Button mvx:Bi.nd="Command SignIn" Content="Sign In" HorizontalAlignment="Center" Margin="0,269,0,0" VerticalAlignment="Top" Height="36" Width="104"/>
+        <Button mvx:Bi.nd="Command SignUp" Content="Sign Up Instead?" HorizontalAlignment="Center" Height="35" Margin="0,428,0,0" VerticalAlignment="Top" Width="148" BorderBrush="White" Background="White"/>
+        <TextBlock mvx:Bi.nd="Text Error" FontSize="15" FontFamily="bold" Foreground="Red" HorizontalAlignment="Center" TextAlignment="Center" Height="33" Margin="0,355,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="246"/>
 
 
 

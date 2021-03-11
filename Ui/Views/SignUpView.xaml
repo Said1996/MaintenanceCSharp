@@ -7,9 +7,30 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Ui.Views"
+            xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" FontSize="20"
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="White" >
-        
+             Width="300" Height="500" >
+    <Grid Background="#FFB9DCDE">
+        <TextBlock HorizontalAlignment="Center" Text="Maintenance" TextWrapping="Wrap" VerticalAlignment="Top" Height="65" Width="224" RenderTransformOrigin="0.457,0.554" FontFamily="Britannic Bold" FontWeight="Bold" FontSize="40" Margin="0,8,0,0">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFDC3B3B" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="98,68,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Height="39" Width="116"  Foreground="#FF606CB8" FontWeight="Bold" FontSize="26" FontFamily="Arial Black"><Run Text="Sign Up"/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" TextAlignment="Right" Margin="46,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="82" Height="28" FontWeight="Bold" FontFamily="Segoe UI"><Run Text="Name:"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" TextAlignment="Right" Margin="27,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" Height="28" FontWeight="Bold"><Run Text="Email:"/><LineBreak/><Run/></TextBlock>
+        <TextBox mvx:Bi.nd="Text Name" HorizontalAlignment="Left" Margin="142,119,0,0" Text="Name" TextWrapping="NoWrap" VerticalAlignment="Top" Width="129" Background="#FF508CE2"/>
+        <TextBox mvx:Bi.nd="Text Email" HorizontalAlignment="Left" Margin="142,175,0,0" Text="Email" TextWrapping="NoWrap" VerticalAlignment="Top" Width="129" Background="#FF528EE4"/>
+        <Button mvx:Bi.nd="Command SignUp" Content="Sign Up" HorizontalAlignment="Left" Margin="104,307,0,0" VerticalAlignment="Top" Height="36" Width="104"/>
+        <Button mvx:Bi.nd="Command SignIn" Content="Sign In Instead?" HorizontalAlignment="Left" Height="35" Margin="82,428,0,0" VerticalAlignment="Top" Width="148" BorderBrush="White" Background="White"/>
+        <TextBlock mvx:Bi.nd="Text Error" HorizontalAlignment="Left" TextAlignment="Center" Height="36" Margin="33,373,0,0" FontSize="15" Foreground="Red" FontWeight="Bold" TextWrapping="Wrap" VerticalAlignment="Top" Width="246"/>
+        <TextBlock HorizontalAlignment="Left" TextAlignment="Right" Margin="10,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="118" Height="28" FontWeight="Bold" FontFamily="Segoe UI"><Run Text="Password:"/><LineBreak/><Run/></TextBlock>
+        <TextBox mvx:Bi.nd="Text Password"  HorizontalAlignment="Left" Margin="142,0,0,0"  VerticalAlignment="Center" Width="129" Background="#FF508CE2"/>
+
+
+
     </Grid>
 </views:MvxWpfView>

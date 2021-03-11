@@ -8,7 +8,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Ui.Views"
              mc:Ignorable="d" FontSize="20"
-             d:DesignHeight="700" d:DesignWidth="1100"
+             Height="700" Width="1100"
     
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -86,7 +86,7 @@
             
         </Grid>
 
-        <DataGrid x:Name="Table1" AutoGenerateColumns="True" mvx:Bi.nd="ItemsSource ClientDevices; SelectedItem ClientDevice"  Grid.Row="0" Grid.Column="0" Background="Cyan" CanUserAddRows="False" AutoGeneratingColumn="DataGrid_AutoGeneratingColumn">
+        <DataGrid x:Name="Table1" AutoGenerateColumns="True" mvx:Bi.nd="ItemsSource ClientDevices; SelectedItem ClientDevice"  MinColumnWidth="100" Grid.Row="0" Grid.Column="0" Background="Cyan" CanUserAddRows="False" AutoGeneratingColumn="DataGrid_AutoGeneratingColumn">
             <DataGrid.Columns>
                 <DataGridTemplateColumn Header="Paid">
                     <DataGridTemplateColumn.CellTemplate>

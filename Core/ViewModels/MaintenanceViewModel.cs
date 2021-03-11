@@ -11,9 +11,9 @@ using System.Windows.Input;
 
 namespace Core.ViewModels
 {
-    partial class MaintenanceViewModel : MvxViewModel
+    partial class MaintenanceViewModel : MvxViewModel<User>
     {
-        public readonly INC<ObservableCollection<ClientDevice>> ClientDevices = new NC<ObservableCollection<ClientDevice>>();
+        public ObservableCollection<ClientDevice> ClientDevices = new ObservableCollection<ClientDevice>();
         public readonly INC<ClientDevice> ClientDevice = new NC<ClientDevice>();
         public readonly INC<string> Name = new NC<string>();
         public readonly INC<string> Number = new NC<string>();
@@ -22,13 +22,17 @@ namespace Core.ViewModels
         public readonly INC<int> Price = new NC<int>();
         public readonly INC<string> User = new NC<string>();
 
-        public DeviceContext Context = new DeviceContext();
+        private DeviceContext Context = new DeviceContext();
 
         public MaintenanceViewModel()
         {
             Context.ClientDevices.Load();
+            ClientDevices = Context.ClientDevices.Local;
+        }
 
-            ClientDevices.Value = Context.ClientDevices.Local;
+        public override async void Prepare(User user)
+        {
+            User.Value = user.Name;
         }
 
         private ICommand _addDevice;
@@ -44,7 +48,7 @@ namespace Core.ViewModels
         public void AddingDevice()
         {
             var newDevice = new ClientDevice { Done = false, Name = Name.Value, ReceivingTime = DateTime.Now.ToString(), Price = Price.Value, RecieverEmployee = User.Value, DeviceStatus = Status.Value, PhoneNumber = Number.Value, Problem = Problem.Value };
-            ClientDevices.Value.Add(newDevice);
+            ClientDevices.Add(newDevice);
 
             Context.SaveChanges();
         }
@@ -62,7 +66,7 @@ namespace Core.ViewModels
 
         public void DeletingDevice()
         {
-            ClientDevices.Value.Remove(ClientDevice.Value);
+            ClientDevices.Remove(ClientDevice.Value);
             Context.SaveChanges();
         }
 
